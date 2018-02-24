@@ -582,17 +582,17 @@ var TreemapMain = /** @class */ (function () {
             'child': this.childBuffer
         };
     };
-    TreemapMain.prototype.updateData = function (data) {
+    TreemapMain.prototype.updateData = function (data, isEqual) {
         this.mouse.click.x = -5;
         this.mouse.click.y = -5;
+        this.equalpartition = isEqual;
         this.updateBuffers(this.width, this.height, data);
         this.drawParentRects();
         this.drawChildRects();
     };
-    TreemapMain.prototype.init = function (id, w, h, data, equal) {
-        if (equal) {
-            this.equalpartition = equal;
-        }
+
+    TreemapMain.prototype.init = function (id, w, h, data, isEqual) {
+        this.equalpartition = isEqual;
         this.setDrawboard(id, w, h, data);
         this.draw();
     };
@@ -865,7 +865,8 @@ var Treemap = /** @class */ (function () {
         this.offset.x = offsetX - window.pageXOffset;
         this.offset.y = offsetY - window.pageYOffset;
     };
-    Treemap.prototype.changeData = function (data) {
+
+    Treemap.prototype.changeData = function (data, isEqual) {
         var _this = this;
         this.mouse.enable = false;
         setTimeout(function () {
@@ -874,6 +875,7 @@ var Treemap = /** @class */ (function () {
         this.transition.updateBuffers(this.main.getBuffers());
         this.transition.start();
         setTimeout(this.main.updateData(data), 100);
+        setTimeout(this.main.updateData(data, isEqual), 100);
     };
     Treemap.prototype.getClickIndex = function () {
         return this.main.getCLickIndex();
@@ -881,18 +883,16 @@ var Treemap = /** @class */ (function () {
     Treemap.prototype.setOffsetClass = function (className) {
         this.offset["class"] = className;
     };
-    Treemap.prototype.init = function (id, width, height, data, equal) {
-        var option = false;
+    Treemap.prototype.init = function (id, width, height, data, isEqual) {
         this.container.width = width;
         this.container.height = height;
         this.container.id.self = id;
         this.container.data = data;
-        if (equal) {
-            option = equal;
-        }
+
         this.setDrawboard(width, height, id);
         this.setStyle(this.container.self);
-        this.main.init(this.container.id.main, width, height, data, equal);
+        this.main.init(this.container.id.main, width, height, data, isEqual);
+
         this.transition.init(this.container.id.transition, width, height);
         this.setEvents(this.container.self, this.main, this.transition);
         this.setOffset();
