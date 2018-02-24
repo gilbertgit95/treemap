@@ -590,7 +590,6 @@ var TreemapMain = /** @class */ (function () {
         this.drawParentRects();
         this.drawChildRects();
     };
-
     TreemapMain.prototype.init = function (id, w, h, data, isEqual) {
         this.equalpartition = isEqual;
         this.setDrawboard(id, w, h, data);
@@ -865,7 +864,6 @@ var Treemap = /** @class */ (function () {
         this.offset.x = offsetX - window.pageXOffset;
         this.offset.y = offsetY - window.pageYOffset;
     };
-
     Treemap.prototype.changeData = function (data, isEqual) {
         var _this = this;
         this.mouse.enable = false;
@@ -874,7 +872,6 @@ var Treemap = /** @class */ (function () {
         }, 100);
         this.transition.updateBuffers(this.main.getBuffers());
         this.transition.start();
-        setTimeout(this.main.updateData(data), 100);
         setTimeout(this.main.updateData(data, isEqual), 100);
     };
     Treemap.prototype.getClickIndex = function () {
@@ -888,11 +885,9 @@ var Treemap = /** @class */ (function () {
         this.container.height = height;
         this.container.id.self = id;
         this.container.data = data;
-
         this.setDrawboard(width, height, id);
         this.setStyle(this.container.self);
         this.main.init(this.container.id.main, width, height, data, isEqual);
-
         this.transition.init(this.container.id.transition, width, height);
         this.setEvents(this.container.self, this.main, this.transition);
         this.setOffset();
