@@ -1,0 +1,22 @@
+{
+  "name": "treemap",
+  "version": "1.0.0",
+  "description": "\"treemap generator for web apps\"",
+  "main": "null",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilbertgit95/treemap.git"
+  },
+  "keywords": [
+    "bitshit"
+  ],
+  "author": "Gilbert Cuerbo <gilbert.cuerbo@gmail.com> (lakambo.netne.net)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilbertgit95/treemap/issues"
+  },
+  "homepage": "https://github.com/gilbertgit95/treemap#readme"
+}
