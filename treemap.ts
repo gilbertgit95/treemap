@@ -837,19 +837,18 @@ class TreemapMain {
         }
     }
 
-    public updateData(data: any) {
+    public updateData(data: any, isEqual: boolean) {
         this.mouse.click.x = -5
         this.mouse.click.y = -5
+        this.equalpartition = isEqual
 
         this.updateBuffers(this.width, this.height, data)
         this.drawParentRects()
         this.drawChildRects()
     }
 
-    public init(id: string, w: number, h: number, data: any, equal: boolean) {
-        if (equal) {
-            this.equalpartition = equal
-        }
+    public init(id: string, w: number, h: number, data: any, isEqual: boolean) {
+        this.equalpartition = isEqual
         this.setDrawboard(id, w, h, data)
         this.draw()
     }
@@ -1202,7 +1201,8 @@ class Treemap {
             this.offset.y = offsetY - window.pageYOffset
         }
 
-        public changeData(data: any) {
+        public changeData(data: any, isEqual: boolean) {
+
             this.mouse.enable = false
             setTimeout(() => {
                 this.mouse.enable = true
@@ -1210,7 +1210,7 @@ class Treemap {
     
             this.transition.updateBuffers(this.main.getBuffers())
             this.transition.start()
-            setTimeout(this.main.updateData(data), 100)
+            setTimeout(this.main.updateData(data, isEqual), 100)
         }
 
         public getClickIndex() {
@@ -1221,22 +1221,17 @@ class Treemap {
             this.offset.class = className
         }
 
-        public init(id: string, width: number, height: number, data: any, equal: boolean) {
-            let option = false
+        public init(id: string, width: number, height: number, data: any, isEqual: boolean) {
     
             this.container.width = width
             this.container.height = height
             this.container.id.self = id
             this.container.data = data
     
-            if (equal) {
-                option = equal
-            }
-    
             this.setDrawboard(width, height, id)
             this.setStyle(this.container.self)
     
-            this.main.init(this.container.id.main, width, height, data, equal)
+            this.main.init(this.container.id.main, width, height, data, isEqual)
             this.transition.init(this.container.id.transition, width, height)
     
             this.setEvents(
