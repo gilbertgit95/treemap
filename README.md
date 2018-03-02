@@ -6,6 +6,38 @@ _hope this library will be helpful to your project._
 
 ***
 
+### _overview:_
+
+  * generate tree image on initiate
+
+  * change data after sometime
+    
+  * mouse position
+
+  * offset elements
+
+### _example screenshots_
+
+  * equal partitioning
+
+   ![equal partition image](http://lakambo.netne.net/files/treemap/treemap_1.png)
+
+  * value based partitioning
+
+    ![value based partition image](http://lakambo.netne.net/files/treemap/treemap_3.png)
+
+  * hover tip when the rects are too small
+
+    ![hover tip](http://lakambo.netne.net/files/treemap/treemap_2.png)
+
+  * startup code
+
+    ![html code](http://lakambo.netne.net/files/treemap/treemap_code_1.png)
+
+
+***
+
+
 ## getting started
 
 **first:**
