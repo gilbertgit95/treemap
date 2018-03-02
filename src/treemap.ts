@@ -1244,4 +1244,4 @@ class Treemap {
         }
 }
 
-export default Treemap
+//export default Treemap
