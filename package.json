@@ -4,19 +4,24 @@
   "description": "\"treemap generator for web apps\"",
   "main": "null",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gilbertgit95/treemap.git"
   },
-  "keywords": [
-    "bitshit"
-  ],
+  "keywords": [],
   "author": "Gilbert Cuerbo <gilbert.cuerbo@gmail.com> (lakambo.netne.net)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gilbertgit95/treemap/issues"
   },
-  "homepage": "https://github.com/gilbertgit95/treemap#readme"
+  "homepage": "https://github.com/gilbertgit95/treemap#readme",
+  "devDependencies": {
+    "ts-loader": "^4.0.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9"
+  }
 }
