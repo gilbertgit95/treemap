@@ -52,7 +52,7 @@ _hope this library will be helpful to your project._
 
    _create element where you want the image generated to be placed_
 
-   _**note**: id is a must!_
+   _**note**: id is a required!_
   
    `<div id="treemap"></div>`
 
@@ -62,7 +62,7 @@ _hope this library will be helpful to your project._
 
   _this will automatically insert elements and generate the initial image_
 
-  _**note**: id of element, array of data, width, height, partitioning type is a must!_
+  _**note**: id of element, array of data, width, height, partitioning type are required!_
 
      `var myTree = new Treemap();`
 
