@@ -1,10 +1,44 @@
 # treemap
+
 a treemap generator for web apps
+
 _Hi there :)_
 
 _hope this library will be helpful to your project._
 
 ***
+
+### _overview:_
+
+  * generate tree image on initiate
+
+  * change data after sometime
+    
+  * mouse position
+
+  * offset elements
+
+### _example screenshots_
+
+  * equal partitioning
+
+   ![equal partition image](http://lakambo.netne.net/files/treemap/treemap_1.png)
+
+  * value based partitioning
+
+    ![value based partition image](http://lakambo.netne.net/files/treemap/treemap_3.png)
+
+  * hover tip when the rects are too small
+
+    ![hover tip](http://lakambo.netne.net/files/treemap/treemap_2.png)
+
+  * startup code
+
+    ![html code](http://lakambo.netne.net/files/treemap/treemap_code_1.png)
+
+
+***
+
 
 ## getting started
 
@@ -18,7 +52,7 @@ _hope this library will be helpful to your project._
 
    _create element where you want the image generated to be placed_
 
-   _**note**: id is a must!_
+   _**note**: id is a required!_
   
    `<div id="treemap"></div>`
 
@@ -28,7 +62,7 @@ _hope this library will be helpful to your project._
 
   _this will automatically insert elements and generate the initial image_
 
-  _**note**: id of element, array of data, width, height, partitioning type is a must!_
+  _**note**: id of element, array of data, width, height, partitioning type are required!_
 
      `var myTree = new Treemap();`
 
