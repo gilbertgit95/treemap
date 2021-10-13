@@ -22,19 +22,19 @@ _hope this library will be helpful to your project._
 
   * equal partitioning
 
-   ![equal partition image](http://lakambo.netne.net/files/treemap/treemap_1.png)
+   ![equal partition image](https://raw.githubusercontent.com/gilbertgit95/treemap/master/images/treemap_1.png)
 
   * value based partitioning
 
-    ![value based partition image](http://lakambo.netne.net/files/treemap/treemap_3.png)
+    ![value based partition image](https://raw.githubusercontent.com/gilbertgit95/treemap/master/images/treemap_3.png)
 
   * hover tip when the rects are too small
 
-    ![hover tip](http://lakambo.netne.net/files/treemap/treemap_2.png)
+    ![hover tip](https://raw.githubusercontent.com/gilbertgit95/treemap/master/images/treemap_2.png)
 
   * startup code
 
-    ![html code](http://lakambo.netne.net/files/treemap/treemap_code_1.png)
+    ![html code](https://raw.githubusercontent.com/gilbertgit95/treemap/master/images/treemap_code_1.png)
 
 
 ***
