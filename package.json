@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/gilbertgit95/treemap#readme",
   "devDependencies": {
-    "ts-loader": "^4.0.0",
+    "ts-loader": "^9.4.2",
     "typescript": "^2.7.2",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.9"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
